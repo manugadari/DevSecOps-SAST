@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools { 
-        maven 'maven_3_5_2'  
+        maven 'MAVEN'  
     }
    stages{
     stage('Run SCA Analysis using Snyk') {

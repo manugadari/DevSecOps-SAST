@@ -10,12 +10,12 @@ pipeline {
 			    sh 'mvn snyk:test'
 				}
 			}
-	    stage('Test') {
-      steps {
-        echo 'Testing...'
-        snykSecurity(
-          snykInstallation: 'SNYK',
-          snykTokenId: 'SNYK_TOKEN',
+    stage('Test') {
+        steps {
+          echo 'Testing...'
+           snykSecurity(
+             snykInstallation: 'SNYK',
+             snykTokenId: 'SNYK_TOKEN',
         )
       }
     }

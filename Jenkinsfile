@@ -10,9 +10,9 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Testing...'
-        snykSecurity(
-         snykSecurity failOnError: false, severity: 'critical', snykInstallation: 'SNYK', snykTokenId: 'SNYK_API_TOKEN'
-        )
+        
+           snykSecurity failOnError: false, severity: 'critical', snykInstallation: 'SNYK', snykTokenId: 'SNYK_API_TOKEN'
+        
       }
     }
     stage('Deploy') {

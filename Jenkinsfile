@@ -7,9 +7,8 @@ pipeline {
         snykSecurity(
           snykInstallation: 'SNYK',
           snykTokenId: 'SNYK_API_TOKEN',
-          snyk code test>>sastreport.txt
+            snyk code test>>sastreport.txt
         )
-        
       }
     }
     stage('Test') {

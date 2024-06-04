@@ -2,9 +2,14 @@ pipeline {
   agent any
 
   stages {
-    stage('Build') {
+    stage('SAST SCANNING') {
       steps {
-        echo 'Building...'
+        snykSecurity(
+          snykInstallation: 'SNYK',
+          snykTokenId: 'SNYK_API_TOKEN',
+          snyk code test>>sastreport.txt
+        )
+        
       }
     }
     stage('Test') {

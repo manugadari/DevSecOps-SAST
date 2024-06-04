@@ -1,8 +1,5 @@
 pipeline {
   agent any
-  tools {
-    SNYK
-  }
 
   stages {
     stage ('Run SAST Scan') {

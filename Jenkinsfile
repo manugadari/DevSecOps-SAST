@@ -10,16 +10,9 @@ pipeline {
 			}
      stage('Run SAST Analysis using Snyk') {
             steps {	
-                   snykSecurity(
-                        snykInstallation: 'SNYK',
-                        snykTokenId: 'SNYK_API_TOKEN',
-			failOnIssues: 'false'
-			   sh './snyk test'
-
-                               
-        )
-                                
-		
+                   
+		    sh './snyk test'
+		    
 				}
 			}
     }	

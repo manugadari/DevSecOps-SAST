@@ -10,7 +10,7 @@ pipeline {
 			}
      stage('Run SAST Analysis using Snyk') {
             steps {	
-                   sh 'SNYK monitor'
+                   SNYK test --all-projects --org=snyk-apps --severity-threshold=high
 		
 				}
 			}

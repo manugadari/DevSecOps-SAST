@@ -1,14 +1,13 @@
 pipeline {
   agent any
- 
-   stages{
-    stage('Run SCA Analysis using Snyk') {
-            steps {	
-                      snykSecurity failOnError: false, failOnIssues: false, organisation: 'manugadari', snykInstallation: 'SNYK', snykTokenId: 'SNYK_API_TOKEN'
-		
-				}
-			}
-
-
+  tools {
+    SNYK
   }
 
+  stages {
+    stage ('Run SAST Scan') {
+      steps {
+            snykSecurity failOnError: false, failOnIssues: false, organisation: 'manugadari', snykInstallation: 'SNYK', snykTokenId: 'SNYK_API_TOKEN'      }
+    }
+  }
+}

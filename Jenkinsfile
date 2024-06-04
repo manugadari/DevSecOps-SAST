@@ -14,7 +14,6 @@ pipeline {
                         snykInstallation: 'SNYK',
                         snykTokenId: 'SNYK_API_TOKEN',
 			failOnIssues: 'false'
-			monitorProjectOnBuild:'true'
 
                                
         )

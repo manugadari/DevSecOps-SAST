@@ -4,8 +4,7 @@ pipeline {
   stages {
     stage('SAST SCANNING') {
       steps {
-            snykSecurity failOnError: false, failOnIssues: false, monitorProjectOnBuild: false, severity: 'high', snykInstallation: 'SNYK', snykTokenId: 'SNYK_API_TOKEN'
-             sh 'snyk code test>>sastreport.txt'
+            snykSecurity additionalArguments: 'sh \'snyk code test>>sastreport.txt\'', failOnError: false, failOnIssues: false, monitorProjectOnBuild: false, severity: 'high', snykInstallation: 'SNYK', snykTokenId: 'SNYK_API_TOKEN'
       }
     }
     stage('Test') {

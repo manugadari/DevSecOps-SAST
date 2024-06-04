@@ -13,9 +13,13 @@ pipeline {
                    snykSecurity(
                         snykInstallation: 'SNYK',
                         snykTokenId: 'SNYK_API_TOKEN',
+			failOnIssues: 'false'
+		        failOnError: 'false'
+			monitorProjectOnBuild:'true'
+
                                
         )
-                                 SNYK monitor
+                                
 		
 				}
 			}

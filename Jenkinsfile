@@ -4,8 +4,7 @@ pipeline {
    stages{
     stage('Run SCA Analysis using Snyk') {
             steps {	
-		    snykSecurity failOnError: false, failOnIssues: false, organisation: 'devsecops', projectName: 'sast_scan', severity: 'high', snykInstallation: 'SNYK', snykTokenId: 'SNYK_API_TOKEN'
-		    sh 'SNYK code test'
+                      snykSecurity failOnError: false, failOnIssues: false, organisation: 'manugadari', snykInstallation: 'SNYK', snykTokenId: 'SNYK_API_TOKEN'		    sh 'SNYK code test'
 				}
 			}
     }	

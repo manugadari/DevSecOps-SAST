@@ -10,7 +10,7 @@ pipeline {
 			}
      stage('Run SAST Analysis using Snyk') {
             steps {	
-                     SNYK monitor
+                    snyk monitor
 		
 				}
 			}

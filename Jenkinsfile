@@ -13,7 +13,7 @@ pipeline {
                    snykSecurity(
                         snykInstallation: 'SNYK',
                         snykTokenId: 'SNYK_API_TOKEN',
-          // place other parameters here
+                               sh 'SNYK monitor'
         )
 
 		

@@ -10,7 +10,10 @@ pipeline {
 			}
      stage('Run SAST Analysis using Snyk') {
             steps {	
-                   SNYK test --all-projects --org=snyk-apps --severity-threshold=high
+                   snykSecurity(
+                                 snykInstallation: 'SNYK',
+                                 snykTokenId: 'SNYK_API_TOKEN,
+			          SNYK monitor
 		
 				}
 			}

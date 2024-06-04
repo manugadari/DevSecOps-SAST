@@ -11,7 +11,7 @@ pipeline {
      stage('Run SAST Analysis using Snyk') {
             steps {	
                    
-		    sh './snyk test'
+		    sh './SNYK test'
 		    
 				}
 			}

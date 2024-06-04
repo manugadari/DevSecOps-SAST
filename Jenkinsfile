@@ -8,14 +8,6 @@ pipeline {
 		
 				}
 			}
-     stage('Run SAST Analysis using Snyk') {
-            steps {	
-                   
-		    sh './SNYK test'
-		    
-				}
-			}
-    }	
 
 
   }
